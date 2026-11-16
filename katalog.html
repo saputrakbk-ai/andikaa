@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe tomoro— Katalog Menu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+        </svg>
+        <span>Cafe Tomoro</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="katalog.html" class="active">Katalog</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <h1>Menu Cafe Tomoro</h1>
+      <p>Pilih favorit Anda — semua diracik dengan bahan segar setiap hari.</p>
+    </section>
+
+    <!-- Filter & Search (bonus JS) -->
+    <section class="filter-bar">
+      <label for="filterKategori">Filter Kategori:</label>
+      <select id="filterKategori">
+        <option value="all">Semua</option>
+        <option value="Kopi">Kopi</option>
+        <option value="Non-Kopi">Non-Kopi</option>
+        <option value="Makanan">Makanan</option>
+      </select>
+      <label for="cariNama">Cari Nama:</label>
+      <input type="search" id="cariNama" placeholder="Cari menu...">
+    </section>
+
+    <section class="katalog">
+      <h2>Daftar Menu</h2>
+      <div class="card-grid" id="katalogGrid">
+        <!-- Kartu dirender via JS, fallback statis di bawah -->
+        <noscript>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" alt="Es kopi susu gula aren">
+            <h3>Es Kopi Susu Gula Aren</h3>
+            <p>Espresso, susu, gula aren.</p>
+            <p class="harga">Rp 25.000</p>
+            <p class="kategori">Kopi</p>
+          </article>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Cafe Tomoro. Jl. Merdeka No. 88, BANGKA . Instagram: @cafetomoro</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

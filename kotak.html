@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe toromo — Kontak</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+        </svg>
+        <span>Cafe Tomoro</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="katalog.html">Katalog</a></li>
+          <li><a href="kontak.html" class="active">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <h1>Hubungi Kami</h1>
+      <p>Punya pertanyaan, saran, atau ingin reservasi? Kami siap membantu.</p>
+    </section>
+
+    <section class="kontak-info">
+      <h2>Informasi Kontak</h2>
+      <ul class="info-list">
+        <li><strong>Alamat:</strong> Jl. Merdeka No. 88, Bandung 40115</li>
+        <li><strong>Telepon:</strong> (022) 1234-5678</li>
+        <li><strong>WhatsApp:</strong> 0812-3456-7890</li>
+        <li><strong>Instagram:</strong> <a href="https://instagram.com/cafetomoro" target="_blank" rel="noopener">@cafetomoro</a></li>
+        <li><strong>Email:</strong> hello@cafetomoro.id</li>
+      </ul>
+    </section>
+
+    <section class="peta">
+      <h2>Lokasi Kami</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.0!2d107.6098!3d-6.9175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTUnMDMuMCJTIDEwN8KwMzYnMzUuMyJF!5e0!3m2!1sid!2sid!4v1700000000000"
+        width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+        title="Peta lokasi Cafe Tomoro di Bandung">
+      </iframe>
+    </section>
+
+    <section class="formulir">
+      <h2>Formulir Kontak</h2>
+      <form id="kontakForm" action="#" method="post" novalidate>
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" required maxlength="80" placeholder="Masukkan nama Anda">
+          <small class="error" id="errNama"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="nama@contoh.com">
+          <small class="error" id="errEmail"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="telepon">Nomor HP</label>
+          <input type="tel" id="telepon" name="telepon" required pattern="[0-9]{10,13}"
+                 placeholder="081234567890">
+          <small class="error" id="errTelepon"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="topik">Topik</label>
+          <select id="topik" name="topik" required>
+            <option value="">-- Pilih Topik --</option>
+            <option value="reservasi">Reservasi</option>
+            <option value="katering">Katering</option>
+            <option value="kerja-sama">Kerja Sama</option>
+            <option value="lainnya">Lainnya</option>
+          </select>
+          <small class="error" id="errTopik"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="5" required minlength="10" maxlength="500"
+                    placeholder="Tulis pesan Anda (min. 10 karakter)"></textarea>
+          <small class="error" id="errPesan"></small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+        <p class="success-msg" id="successMsg"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Cafe Tomoro. Jl. Merdeka No. 88, Bandung. Instagram: @cafetomoro</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
